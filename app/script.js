@@ -64,6 +64,7 @@ addButton.addEventListener("click", function (event) {
         listID++;
         addList(toDoList);
         activity.style.display = "none";
+        deleteAll.style.display = "block"
     }
     checked();
 
@@ -117,6 +118,7 @@ deleteAll.addEventListener("click", function (event) {
         this.parentElement.previousElementSibling.innerHTML = "";
         listID = 0;
         activity.style.display = "block";
+        deleteAll.style.display = "none";
     }
 }, false);
 

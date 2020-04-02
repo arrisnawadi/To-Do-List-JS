@@ -73,7 +73,8 @@ input[type="text"] {
 #main p .delAll {
     background-color: red;
     color: var(--third-color);
-    margin-top: 20px;
+    margin: 20px auto;
+    display: none;
 }
 
 #main p input[type="submit"]:hover {
