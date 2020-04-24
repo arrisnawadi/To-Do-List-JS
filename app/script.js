@@ -1,3 +1,4 @@
+// call all selector
 let addButton = document.querySelector(".add");
 let todo = document.querySelector(".todo");
 let lists = document.getElementById("lists");
@@ -5,7 +6,6 @@ let notif = document.querySelector(".notif");
 const modalAlert = document.getElementById("modalAlert");
 const close = document.querySelector(".close");
 const activity = document.querySelector(".act");
-const deleteAll = document.querySelector(".delAll");
 const list = [];
 let listID = 0;
 
@@ -41,8 +41,8 @@ let month = months[getMonth];
 let date = getDate.getDate();
 let year = getDate.getFullYear();
 document.querySelector(".time").innerHTML = `${today.substring(
-  0,
-  3
+    0,
+    3
 )}, ${date} ${month} ${year}`;
 
 // add list
@@ -64,7 +64,6 @@ addButton.addEventListener("click", function (event) {
         listID++;
         addList(toDoList);
         activity.style.display = "none";
-        deleteAll.style.display = "block"
     }
     checked();
 
@@ -103,24 +102,13 @@ const deleteList = function (element) {
     list.splice(getToDo, 1);
 }
 
+// action when delete button clicked
 lists.addEventListener("click", function (e) {
     const delList = e.target.classList.contains("delete-icon");
     if (delList) {
         deleteList(e.target);
     }
 })
-
-// delete all lists
-deleteAll.addEventListener("click", function (event) {
-    event.preventDefault();
-    if (confirm("Do you want to delete all?")) {
-        list.splice(0, list.length);
-        this.parentElement.previousElementSibling.innerHTML = "";
-        listID = 0;
-        activity.style.display = "block";
-        deleteAll.style.display = "none";
-    }
-}, false);
 
 // close notification
 close.addEventListener("click", event => {

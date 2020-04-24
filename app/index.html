@@ -1,42 +1,36 @@
 x
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-      rel="stylesheet"
-    />
-    <title>To Do List</title>
-  </head>
 
-  <body>
-    <div id="main">
-      <h2>To Do List</h2>
-      <p class="time"></p>
-      <p>
-        <input
-          type="text"
-          placeholder="write your activities today"
-          maxlength="30"
-          class="todo"
-        />
-        <input type="submit" value="Add" class="add" />
-      </p>
-      <p class="act">No activity today</p>
-      <div id="lists"></div>
-      <p><input type="submit" value="Delete All" class="delAll" /></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div id="main">
+    <h2>To Do List</h2>
+    <p class="time"></p>
+    <p>
+      <input type="text" placeholder="write your activities today" maxlength="30" class="todo" />
+      <input type="submit" value="Add" class="add" />
+    </p>
+    <p class="act">No activity today</p>
+    <div id="lists">
     </div>
+  </div>
 
-    <div id="modalAlert" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p class="notif"></p>
-      </div>
+  <div id="modalAlert" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="notif"></p>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
